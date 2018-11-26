@@ -1,0 +1,57 @@
+//$theme-color-primary: #5c1348;
+//$theme-color-primary-light: #a2276e;
+//$theme-color-primary-dark: #360022;
+//
+//
+//$theme-color-secondary: #f7363d;
+//$theme-color-secondary-light: #fd766d;
+//$theme-color-secondary-dark: #bd1219;
+
+
+$theme-color-primary: #2cb4ac;
+$theme-color-primary-light: lighten($theme-color-primary, 10%);
+$theme-color-primary-dark: darken($theme-color-primary, 20%);
+
+
+$theme-color-secondary: #0068AD;
+$theme-color-secondary-light: #268ed3;
+$theme-color-secondary-dark: #004287;
+
+
+$default-text-color: $theme-color-primary-dark;
+$default-link-color: $theme-color-secondary;
+
+$theme-primary: (
+        "base":   $theme-color-primary,
+        "light":  $theme-color-primary-light,
+        "dark":   $theme-color-primary-dark,
+        
+        "lighten-5":  lighten($theme-color-primary,45%),
+        "lighten-4":  lighten($theme-color-primary,20%),
+        "lighten-3":  lighten($theme-color-primary,15%),
+        "lighten-2":  lighten($theme-color-primary,10%),
+        "lighten-1":  lighten($theme-color-primary,5%),
+        "darken-1":    darken($theme-color-primary,5%),
+        "darken-2":    darken($theme-color-primary,10%),
+        "darken-3":    darken($theme-color-primary,15%),
+        "darken-4":    darken($theme-color-primary,20%),
+);
+
+
+
+$theme-secondary: (
+        "base":     $theme-color-secondary,
+        "light":  $theme-color-secondary-light,
+        "dark":   $theme-color-secondary-dark,
+
+        "lighten-5":  lighten($theme-color-secondary,25%),
+        "lighten-4":  lighten($theme-color-secondary,20%),
+        "lighten-3":  lighten($theme-color-secondary,15%),
+        "lighten-2":  lighten($theme-color-secondary,10%),
+        "lighten-1":  lighten($theme-color-secondary,5%),
+        "darken-1":    darken($theme-color-secondary,5%),
+        "darken-2":    darken($theme-color-secondary,10%),
+        "darken-3":    darken($theme-color-secondary,15%),
+        "darken-4":    darken($theme-color-secondary,20%),
+
+);

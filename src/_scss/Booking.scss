@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+@import "./import/materialize";
+@import "./custom/common";
+
+$turquoise: #35b3ab;
+
+
+.turquoise-theme{
+
+  .input-field input + label, .materialize-textarea:focus:not([readonly]) + label {
+    color: lighten($turquoise,20%) !important;
+  }
+
+  .input-field input, .materialize-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid lighten($turquoise,20%) !important;
+    box-shadow: 0 1px 0 0 lighten($turquoise,20%) !important;
+  }z
+
+
+  .input-field input:focus + label, .materialize-textarea:focus:not([readonly]) + label {
+    color: $turquoise !important;
+  }
+
+  .input-field input:focus, .materialize-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid $turquoise !important;
+    box-shadow: 0 1px 0 0 $turquoise !important;
+  }
+
+  textarea{
+    color: $turquoise;
+    border: 2px solid lighten($turquoise,20%);
+    border-radius: 5px;
+    &:focus{
+      border: 2px solid $turquoise;
+    }
+  }
+  label{
+    color: lighten($turquoise,20%);
+    &:focus-within{
+      color: $turquoise;
+    }
+  }
+
+}

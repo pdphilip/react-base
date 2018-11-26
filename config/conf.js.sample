@@ -1,0 +1,19 @@
+const path = require('path');
+
+let TS = new Date().toISOString().slice(0, 19).replace('20', 'A').replace('T', '_').replace('-', '').replace('-', '').replace(':', '').replace(':', '');
+
+
+const SRC_DIR = path.join(__dirname, '../src');
+
+const DEV_DIR = path.join(__dirname, '../_dev');
+const STAGE_DIR = '/ABSOLUTE/FILEPATH/TO/OUTPUT';
+const BUILD_DIR = path.join(__dirname, '../_dist');
+
+module.exports = {
+    path: path,
+    TS: TS,
+    BUILD_DIR: BUILD_DIR,
+    STAGE_DIR: STAGE_DIR,
+    DEV_DIR: DEV_DIR,
+    SRC_DIR: SRC_DIR,
+};
