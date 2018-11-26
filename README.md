@@ -16,9 +16,9 @@
 	npm i webpack-dev-server -D
 	
 ## Config:	
-> Rename `config/conf.js.sample` to `config/conf.js` and configure vars
-> Edit `webpack.config.js` if needed
-> Edit scripts `package.json`:	
+> Rename `config/conf.js.sample` to `config/conf.js` and configure vars    
+> Edit `webpack.config.js` if needed    
+> Edit scripts `package.json`:    	
 
 	....
 	....
