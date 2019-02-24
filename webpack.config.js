@@ -4,7 +4,6 @@ let BASE = {
     entry: {
         EntryA: "./src/EntryPointA.js",
         EntryB: "./src/EntryPointB.js",
-        // collaboration_room: "./src/CollaborationRoom.js",
     },
     module: {
         rules: [

@@ -1,7 +1,10 @@
 import React, {Component} from 'react';
 import ReactDOM from "react-dom"
 
-class EntryPointB extends Component {
+class EntryPointA extends Component {
+
+    domId = 'SOME-ID';
+    domAttribute = 'SOME-ATTR';
 
     state = {
         hasError: false,
@@ -9,19 +12,35 @@ class EntryPointB extends Component {
         profileId: null,
     };
 
-
-    componentDidMount() {
+    //--> FIRST RENDER
+    constructor(props) {
+        super(props);
         let self = this.state;
         if(!self.profileId){
-            let el = document.getElementById("WF-BOOKING-FORM");
-            self.profileId = el.getAttribute("WFP");
+            let el = document.getElementById(this.domId);
+            self.profileId = el.getAttribute(this.domAttribute);
             if(!self.profileId){
-            	this.setError('Missing Parameters','Please check your embed code');
+                this.setError('Missing Parameters','Please check your embed code');
             }
             this.setState(self);
         }
 
-    };
+    }
+
+    //-------------> UPDATE LIFECYCLE~1: Use setState() here
+    componentWillReceiveProps(newProps) {
+
+    }
+
+    //-------------> UPDATE LIFECYCLE~2: Skips render() if returns false
+    shouldComponentUpdate(newProps, newState){
+        return true;
+    }
+
+    //-------------> UPDATE LIFECYCLE~3: NO setState() here
+    componentWillUpdate (newProps, newState){
+
+    }
 
     //State setters
     setError = (title,detail) => {
@@ -40,7 +59,7 @@ class EntryPointB extends Component {
             return <Error title={this.state.errorData.title} detail={this.state.errorData.detail}  />;
         }
         if(this.state.profileId){
-            return <Booking profileId={this.state.profileId} externalSource={true}  />
+            return <ComponentName profileId={this.state.profileId}  />
         }
 
         return (
@@ -51,4 +70,4 @@ class EntryPointB extends Component {
 
 
 }
-ReactDOM.render(<EntryPointA />, document.getElementById("WF-BOOKING-FORM"));
+ReactDOM.render(<EntryPointA />, document.getElementById(this.domId));
