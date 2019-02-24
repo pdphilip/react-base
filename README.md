@@ -9,6 +9,7 @@
 ##NPM modules:    
 ####React & Babel    
 	npm i webpack  webpack-cli @babel/core babel-loader @babel/preset-env @babel/plugin-proposal-class-properties react react-dom @babel/preset-react axios -D
+	npm i  @babel/plugin-proposal-class-properties @babel/plugin-syntax-dynamic-import -D
 
 ####SCSS & files   
 	npm i style-loader css-loader sass-loader node-sass url-loader file-loader -D
